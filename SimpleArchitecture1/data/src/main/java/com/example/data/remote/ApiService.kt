@@ -5,6 +5,6 @@ import retrofit2.http.GET
 
 interface ApiService {
 
-    @GET("/teams")
+    @GET("/api/v1//teams")
     suspend fun getTeamData() : ArrayList<TeamResponse>
 }
