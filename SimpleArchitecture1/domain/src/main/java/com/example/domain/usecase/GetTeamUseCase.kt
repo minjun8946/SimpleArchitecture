@@ -6,7 +6,8 @@ import com.example.domain.repository.Repository
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
-class GetTeamUseCase @Inject constructor(private val repository: Repository) : UseCase<Unit, List<Team>>() {
-    override suspend fun create(data: Unit): Flow<List<Team>> =
+class GetTeamUseCase @Inject constructor(private val repository: Repository)
+{
+    suspend operator fun invoke(): Flow<List<Team>> =
         repository.getTeamData()
 }

@@ -16,7 +16,7 @@ class MainViewModel @Inject constructor(
     fun getTeam(){
         viewModelScope.launch {
             try {
-                getTeamUseCase.create(Unit).collect {
+                getTeamUseCase().collect {
                     println(it)
                 }
             }catch(e : Throwable){
