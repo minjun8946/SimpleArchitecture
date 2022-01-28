@@ -6,7 +6,7 @@ dependencyResolutionManagement {
         jcenter() // Warning: this repository is going to shut down soon
     }
 }
-rootProject.name = "SinpleArchitecture2"
+rootProject.name = "SimpleArchitecture2"
 include ':presentation'
 include ':domain'
 include ':data'
