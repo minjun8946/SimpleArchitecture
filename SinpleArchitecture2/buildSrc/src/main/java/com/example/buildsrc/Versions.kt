@@ -21,6 +21,6 @@ object Versions {
     const val hiltCompose = "1.0.0-rc01"
     const val coroutines = "1.6.0"
     const val retrofit = "2.9.0"
-    const val okhttp = "5.0.0-alpha.3"
+    const val okhttp = "3.14.9"
     const val test = "1.4.1-alpha03"
 }
