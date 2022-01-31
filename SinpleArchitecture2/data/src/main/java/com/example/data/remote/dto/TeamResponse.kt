@@ -1,5 +1,6 @@
 package com.example.data.remote.dto
 
+import com.example.domain.entity.TeamEntity
 import com.google.gson.annotations.SerializedName
 
 data class TeamResponse(
@@ -15,3 +16,20 @@ data class TeamResponse(
         @SerializedName("name") val name : String
     )
 }
+
+fun TeamResponse.toEntity() =
+    TeamEntity(
+        teamData = teamData.map { it.toEntity() }
+    )
+
+fun TeamResponse.TeamData.toEntity() =
+    TeamEntity.Team(
+        id = id,
+        abbreviation = abbreviation,
+        city = city,
+        conference = conference,
+        division = division,
+        fullName = fullName,
+        name = name
+    )
+
