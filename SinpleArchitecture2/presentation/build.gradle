@@ -53,6 +53,10 @@ android {
 }
 
 dependencies {
+
+    implementation project(path: ':domain')
+    implementation project(path: ':data')
+
     implementation(Libraries.coreKtx)
     implementation(Libraries.appCompat)
     implementation(Libraries.composeActivity)
@@ -72,6 +76,7 @@ dependencies {
     implementation(Libraries.retrofit)
     implementation(Libraries.gsonConverter)
     implementation(Libraries.okhttp)
+    implementation(Libraries.okhttpLogging)
 
     implementation(Libraries.coroutines)
     implementation(Libraries.coroutinesAndroid)
