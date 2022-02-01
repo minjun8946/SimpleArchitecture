@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 class TeamUseCase @Inject constructor(
-    private val teamRepository: TeamRepository
+    private val teamRepository: TeamRepository,
 ) {
     suspend operator fun invoke(): Flow<TeamEntity>{
         return teamRepository.getTeam()
