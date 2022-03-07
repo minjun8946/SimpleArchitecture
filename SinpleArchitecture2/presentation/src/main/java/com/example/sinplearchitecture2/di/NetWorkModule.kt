@@ -14,7 +14,7 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object NetWorkModule {
-    private const val BASE_URL = "https://www.balldontlie.io/api/v1/"
+    private const val BASE_URL = "https://www.balldontlie.io/"
 
     @Singleton
     @Provides

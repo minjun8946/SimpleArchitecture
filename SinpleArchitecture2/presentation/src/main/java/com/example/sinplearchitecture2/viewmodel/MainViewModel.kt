@@ -1,30 +1,30 @@
 package com.example.sinplearchitecture2.viewmodel
 
-import androidx.lifecycle.SavedStateHandle
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.data.errorhandler.ErrorHandlerImpl
+import com.example.domain.base.NotFound
 import com.example.domain.usccase.TeamUseCase
 import com.example.sinplearchitecture2.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 @HiltViewModel
 class MainViewModel @Inject constructor(
-    //private val handle: SavedStateHandle,
-    private val teamUseCase: TeamUseCase
+    private val teamUseCase: TeamUseCase,
 ) : BaseViewModel() {
 
     fun getTeamUseCase() {
         viewModelScope.launch {
-            try {
-                teamUseCase().collect {
-                    println(it)
+            kotlin.runCatching {
+                    teamUseCase().collect{
+                        println(it.teamData)
+                    }
+            }.onFailure {
+                when(it){
+                    is NotFound -> println("notfound")
                 }
-            } catch (e: Throwable) {
-                println(e)
             }
         }
     }
