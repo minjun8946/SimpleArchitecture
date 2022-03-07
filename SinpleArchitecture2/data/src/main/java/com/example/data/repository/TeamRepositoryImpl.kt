@@ -10,8 +10,10 @@ import javax.inject.Inject
 
 class TeamRepositoryImpl @Inject constructor(
     private val teamDataSource: TeamDataSource
-): TeamRepository {
+) : TeamRepository {
     override suspend fun getTeam(): Flow<TeamEntity> {
-        return flow { teamDataSource.getTeam().toEntity() }
+        return flow {
+            emit(teamDataSource.getTeam().toEntity())
+        }
     }
 }
