@@ -36,6 +36,8 @@ android {
 dependencies {
 
     implementation(Libraries.coroutines)
+    testImplementation 'junit:junit:4.+'
+
 
     implementation(Libraries.inject)
 }
