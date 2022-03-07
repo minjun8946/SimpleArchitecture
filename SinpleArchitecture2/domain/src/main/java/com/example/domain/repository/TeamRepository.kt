@@ -6,5 +6,4 @@ import kotlinx.coroutines.flow.Flow
 interface TeamRepository {
 
     suspend fun getTeam(): Flow<TeamEntity>
-
 }
