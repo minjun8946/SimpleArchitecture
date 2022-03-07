@@ -6,6 +6,6 @@ import retrofit2.http.GET
 
 interface TeamApi {
 
-    @GET("/team")
+    @GET("api/v1/steams")
     suspend fun getTeam(): TeamResponse
 }
