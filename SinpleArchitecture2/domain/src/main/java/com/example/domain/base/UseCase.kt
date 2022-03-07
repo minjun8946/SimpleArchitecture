@@ -1,3 +1,5 @@
 package com.example.domain.base
 
-interface UseCase{}
+abstract class UseCase{
+    abstract suspend fun<I, O> execute(data: I): O
+}
