@@ -9,6 +9,6 @@ class TeamUseCase @Inject constructor(
     private val teamRepository: TeamRepository,
 ) {
     suspend operator fun invoke(): Flow<TeamEntity>{
-        return teamRepository.getTeam()
+        return teamRepository.fetchTeam()
     }
 }
