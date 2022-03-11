@@ -84,4 +84,13 @@ dependencies {
     implementation(Libraries.coroutines)
     implementation(Libraries.coroutinesAndroid)
 
+    implementation(Libraries.moshiKotlin)
+    implementation(Libraries.moshi)
+    kapt(Libraries.moshiCompiler)
+
+    implementation(Libraries.room)
+    implementation(Libraries.roomKtx)
+    kapt(Libraries.roomCompiler)
+
+
 }
