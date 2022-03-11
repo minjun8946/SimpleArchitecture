@@ -1,6 +1,6 @@
 package com.example.sinplearchitecture2.di
 
-import com.example.data.errorhandler.ErrorHandlerImpl
+import com.example.data.util.ErrorHandlerImpl
 import com.example.domain.ErrorHandler
 import dagger.Binds
 import dagger.Module
