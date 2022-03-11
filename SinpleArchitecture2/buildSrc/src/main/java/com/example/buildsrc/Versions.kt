@@ -23,4 +23,7 @@ object Versions {
     const val retrofit = "2.9.0"
     const val okhttp = "3.14.9"
     const val test = "1.4.1-alpha03"
+    const val room = "2.4.0"
+    const val moshi = "1.12.0"
+    const val moshiKotlin = "1.8.0"
 }
